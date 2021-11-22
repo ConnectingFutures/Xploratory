@@ -1,0 +1,1270 @@
+/**
+Theme Name: Astra Child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+/* ===== Footer ====== */
+
+@media (max-width: 544px) {
+    .wp-block-social-links {
+        justify-content: center;
+    }
+}
+
+
+/* ===== Header ===== */
+
+@media (min-width:1481px) and (max-width: 1720px) {
+
+    .ast-builder-layout-element .ast-site-identity {
+        margin-left: 0;
+    }
+
+    .site-primary-header-wrap{
+        max-width: 1540px;
+    }
+
+}
+
+@media (min-width:921px) and (max-width: 1480px) {
+
+    .ast-builder-layout-element .ast-site-identity {
+        margin-left: 0;
+    }
+
+}
+
+.ast-logo-title-inline .ast-site-identity{
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.ast-primary-header-bar {
+    border-bottom-width: 0;
+}
+
+
+/* ===== Custom Breadcrumbs ===== */
+.custom-breadcrumbs {
+    z-index: 9;
+    display: block;
+    position: relative;
+    top: 62px;
+    padding: 24px 0 22px 0;
+}
+.site-header {
+    position: absolute;
+    width: 100%;
+}
+
+.custom-breadcrumbs__container {
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+.custom-breadcrumbs__container {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.custom-breadcrumbs__container a {
+    font-weight: 400;
+}
+
+@media (max-width: 921px) {
+    .custom-breadcrumbs {
+        top: 54px;
+    }
+}
+
+@media (max-width: 545px) {
+    .custom-breadcrumbs {
+        top: 44px;
+    }
+
+    .custom-breadcrumbs__container {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+}
+
+
+/* ===== Main Navigation ===== */
+
+.header-widget-area[data-section="sidebar-widgets-header-widget-1"] .header-widget-area-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header-widget-area[data-section="sidebar-widgets-header-widget-1"] .header-widget-area-inner h2 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Matter, Sans-Serif;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#menu-first-main-menu li,
+#menu-second-main-menu li {
+    list-style: none;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.menu-first-main-menu-container ul,
+.menu-second-main-menu-container ul {
+    margin: 0 20px 0 0;
+    margin-top: 20px;
+    font-weight: 700;
+    font-family: Displace, Helvetica, Arial, sans-serif;
+
+}
+
+.menu-first-main-menu-container,
+.menu-second-main-menu-container {
+    min-width: 300px;
+}
+
+
+#menu-first-main-menu li a,
+#menu-second-main-menu li a {
+    cursor: pointer;
+}
+
+#menu-first-main-menu li a:after {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 6px;
+    background-color: #E660B0;
+    content: "";
+    transition: width 0.3s ease-out;
+
+}
+
+#menu-first-main-menu li a:hover:after,
+#menu-first-main-menu li a:focus:after {
+    width: 200px;
+
+}
+
+#menu-first-main-menu li a:hover,
+#menu-second-main-menu li a:hover {
+    color: #000;
+}
+
+@media (max-width: 1024px) {
+
+    #menu-first-main-menu li,
+    #menu-second-main-menu li {
+        list-style: none;
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+}
+
+
+#menu-second-main-menu li a:after {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 6px;
+    content: "";
+    transition: width 0.3s ease-out;
+
+}
+
+#menu-second-main-menu li:nth-child(1) a:after {
+    background-color: #E660B0;
+}
+
+#menu-second-main-menu li:nth-child(2) a:after {
+    background-color: #D2C2B3;
+}
+
+#menu-second-main-menu li:nth-child(3) a:after {
+    background-color: #F09C77;
+}
+
+#menu-second-main-menu li:nth-child(4) a:after {
+    background-color: #B0FCD0;
+}
+
+#menu-second-main-menu li:nth-child(5) a:after {
+    background-color: #F8EFA0;
+}
+
+
+#menu-second-main-menu li a:hover:after,
+#menu-second-main-menuli a:focus:after {
+    width: 300px;
+
+}
+
+
+#menu-second-main-menu li a:after {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 6px;
+    content: "";
+    transition: width 0.3s ease-out;
+
+}
+
+
+/* ===== General CSS ===== */
+
+.hentry {
+    margin: 0;
+}
+
+.hero-block-paddings {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 1480px){
+    .block-paddings{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.extra-paddings{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.right-column-padding{
+    padding-left: 20px;
+}
+
+.extra-right-padding{
+    padding-right: 30px;
+}
+
+.wp-block-columns{
+    margin-bottom: 0;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.wp-block-group .has-background {
+    padding: 0;
+}
+
+.button-paddings a{
+    padding: 12px 24px !important;
+    display: block;
+}
+
+.custom-buttons{
+    font-size: 14px;
+}
+
+.extra-left-margin{
+    margin-left: 25%;
+}
+
+@media (max-width: 1024px){
+
+    .extra-left-margin{
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1025px)and(max-width: 1400px){
+    .extra-left-margin{
+    margin-left: 15%;
+    }
+}
+
+
+.negative-top-margin{
+    margin-top: -12px;
+}
+
+
+
+.wp-block-file .wp-block-file__button {
+    background: #32373c;
+    border-radius: 0;
+    color: #fff;
+    font-size: 0.8em;
+    line-height: 0.5em;
+    padding: 0.5em 0.8em;
+
+}
+
+@media (min-width: 922px)and(max-width: 1440px){
+   p{
+        font-size: 20px !important;
+        line-height: 24px !important;
+    }
+}
+
+
+blockquote {
+    border-left: none;
+    
+}
+
+
+@media (max-width: 1440px){
+    blockquote {
+        margin: 1.5em 1em 1.5em 3em;
+    }
+}
+
+
+.leftsidebar-menu, 
+.leftsidebar-menu a{
+    font-size: 15px;
+    line-height: 22px;
+    max-height: calc(100vh - 190px);
+    overflow: auto;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.leftsidebar-menu{
+    margin-left: 20%;
+    padding-inline-start: 48px;
+        margin-top: 60px;
+
+}
+
+@media (max-width: 921px){
+    .leftsidebar-menu{
+        margin-top: 160px;
+    }
+
+
+}
+
+@media (max-width: 1199px){
+    .leftsidebar-menu{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+
+}
+
+.leftsidebar-menu a {
+    margin-left: 0;
+}
+
+.leftsidebar-menu li{
+    list-style: disc;
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+
+
+/* ====== KOA HEALTH ====== */
+/* ======================== */
+
+
+.single .post-navigation{
+    display: none;
+}
+
+
+
+/* ====== Button Links Hero section ====== */
+
+.button-link-for-page {
+    margin-bottom: 0 !important;
+        border: 2px solid #000;
+        margin-top: -3px;
+}
+
+.button-link-for-page a {
+    width: 150px;
+    min-height: 130px;
+    align-items: flex-end;
+    display: flex;
+    text-transform: capitalize !important;
+    padding-left: 26px !important;
+    font-size: 20px !important;
+
+}
+
+
+/* ====== About us tabs ====== */
+
+
+.about-us-tabs .uagb-columns__inner-wrap {
+    max-width: 1480px;
+}
+
+
+.home-block{
+    min-height: 400px;
+}
+
+.home-block img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10%;
+    margin-top: 10%;
+    max-width: 50%;
+    z-index: 1;
+} 
+
+.home-block h4{
+    margin-left: 5%;
+}
+
+.home-block-line,
+.home-block-line-2 {
+    position: absolute;
+    top: 75%;
+    z-index: 999;
+    width: 280px;
+    padding: 5px !important;
+}
+
+.home-block-line {
+    left: 0;
+}
+
+.home-block-text {
+    margin-left: 5%;
+}
+
+.home-block-2 img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 85%;
+    z-index: 1;
+}
+
+.home-block-h{
+    position: absolute;
+    max-width: 280px;
+    top: 20%;
+    left: 0;
+    z-index: 999;
+}
+
+.home-block-h-2 {
+    position: absolute;
+    max-width: 280px;
+    top: 20%;
+    right: 0;
+    z-index: 999;
+}
+
+.what-we-do-h {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 280px;
+    width: 100%;
+}
+
+.what-we-do img {
+    position: absolute;
+    top: 30px;
+    left: 20%;
+    max-width: 70%;
+}
+
+.our-work img {
+    max-width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.our-work-text {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    overflow: visible;
+}
+
+.work-with-us-h1 {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 280px;
+}
+
+.work-with-us img {
+    position: absolute;
+    max-width: 60%;
+    height: 100%;
+    left: 0;
+    top: 10%;
+    z-index: 1;
+}
+
+.work-with-us-text {
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+}
+
+.work-with-us-2 img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 70%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.about-us-tabs .uagb-tab {
+    width: 33.3% !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 50px 0 !important;
+    margin-top: 0 !important;
+    text-align: center;
+    margin: 0 !important;
+}
+
+.about-us-tabs.uagb-tabs__wrap {
+    margin: 0 !important;
+}
+
+.about-us-tabs .uagb-tab:first-child {
+    background: #707070 !important;
+}
+
+.about-us-tabs .uagb-tab:nth-child(2) {
+    background: #979696 !important;
+}
+
+.about-us-tabs .uagb-tab:nth-child(3) {
+    background: #c7c6c7 !important;
+}
+
+
+.about-us-tabs .uagb-tab:first-child:hover {
+    background: #898787 !important;
+    cursor: pointer;
+}
+
+.about-us-tabs .uagb-tab:nth-child(2):hover {
+    background: #bfbfbf !important;
+    cursor: pointer;
+}
+
+.about-us-tabs .uagb-tab:nth-child(3):hover {
+    background: #dfdfdf !important;
+    cursor: pointer;
+}
+
+.about-us-tabs .uagb-tab:first-child:active {
+    background: #707070 !important;
+    cursor: pointer;
+}
+
+.about-us-tabs .uagb-tab:nth-child(2):active {
+    background: #979696 !important;
+    cursor: pointer;
+}
+
+.about-us-tabs .uagb-tab:nth-child(3):active {
+    background: #c7c6c7 !important;
+    cursor: pointer;
+}
+
+.about-us-tabs .uagb-tabs__panel {
+    width: 100%;
+}
+
+.about-us-tabs .uagb-tabs__body-wrap {
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+}
+
+.about-us-tabs .uagb-tabs__body-container:nth-child(1) {
+    background: #707070 !important;
+}
+
+.about-us-tabs .uagb-tabs__body-container:nth-child(2) {
+    background: #979696 !important;
+}
+
+.about-us-tabs .uagb-tabs__body-container:nth-child(3) {
+    background: #c7c6c7 !important;
+}
+
+.uagb-block-536afc04.uagb-tabs__wrap.uagb-tabs__hstyle5-desktop,
+.uagb-block-466c2c00.uagb-tabs__wrap.uagb-tabs__hstyle5-tablet,
+.uagb-block-466c2c00.uagb-tabs__wrap.uagb-tabs__hstyle5-mobile {
+    background: transparent;
+    border: none !important;
+}
+
+
+.about-us-tabs .uagb-tabs__wrap.uagb-tabs__hstyle1-desktop .uagb-tab{
+    margin: 0 !important; 
+}
+
+.koa-health-wrapper{
+    margin-top: -20px;
+}
+
+
+/* ====== Methods ====== */
+
+.half-img {
+    background: none!important;
+}
+.half-img img {
+    max-width: 65%!important;
+}
+
+
+/* ====== Scenarios =====*/
+
+
+
+.koa-health-scenarios-hero-padding{
+    padding: 0 !important;
+}
+
+.koa-health-scenarios-hero .wp-block-separator{
+    max-width: 600px;
+}
+
+.koa-health-scenarios-hero hr{
+    border: 0;
+    height: 2px;
+    margin-bottom: 0.5em;
+    padding: 0 !important;
+}
+
+
+.scenario-sidebar-hr{
+    display: block;
+    height: 30px;
+}
+
+.ast-left-sidebar #primary {
+    border-left: none;
+}
+
+.ast-left-sidebar #secondary{
+    border-right: none;
+}
+
+#secondary {
+    margin: 2.8em 0 0;
+    position: sticky;
+    top: 200px;
+    z-index: 9;
+}
+
+
+
+.sidebar-main  li{
+    margin-bottom: 20px;
+    line-height: 1.2;
+
+}
+
+
+
+@media (max-width: 921px){
+
+    .ast-left-sidebar #content > .ast-container {
+        flex-direction: column;
+    }
+
+    #secondary {
+        position: relative;
+        top: 0px;
+    }
+
+
+
+}
+
+.scenario-activity-hr{
+    border-top: none;
+    border-bottom: none;
+    margin-bottom: 0.4em;
+    height: 2px;
+}
+
+.scenario-h4{
+    margin-bottom: 4px !important;
+}
+
+/* ===== Koa Health Post listing Right side block ======*/
+
+
+.koa-health-post-listing-sidebar .ultp-block-items-wrap .ultp-block-item .ultp-block-title a:after{
+    display: block;
+    position: absolute;
+    width: 55%;
+    height: 3px;
+    background-color: #000;
+    content: "";
+    margin-top: 4px;
+}
+
+.koa-health-post-listing-sidebar-title{
+    margin-top: 10px;
+
+}
+
+h5.has-background{
+    padding: 8px 60px 6px 2px;
+    line-height: 1;
+
+}
+
+@media (max-width: 1320px){
+    h5.has-background{
+        padding: 8px 8px 6px 2px;
+        line-height: 1;
+
+    }
+
+}
+
+@media (min-width: 1200px)  and (max-width: 1439px){
+
+    .ultp-block-fbcc64 .ultp-block-wrapper {
+        margin: 30px 15px 0px 0px !important;
+    }
+
+
+}
+
+/* ====== Koa Health Idea ====== */
+
+
+.koa-health-idea-heading-positioning .wp-block-group{
+    position: absolute;
+    max-width: 300px;
+    margin-top: 8%;
+
+}
+
+.idea-padding-left{
+    padding-left: 30px;
+}
+
+.idea-padding-right{
+    padding-right: 30px;
+}
+
+
+.idea-hr-text-left{
+    display: block;
+    height: 5px;
+
+    margin-right: 25%;
+}
+
+
+@media (min-width: 1199px){
+    .idea-hero-title{
+        margin-top: -30px;
+    }
+}
+
+
+@media (max-width: 1024px){
+    
+    .koa-health-idea-heading-positioning .wp-block-group{
+        position: relative;
+        max-width: 500px;
+        margin-top: -50px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+
+}
+
+@media (max-width: 600px){
+    
+    .koa-health-idea-heading-positioning .wp-block-group{
+        margin-top: 20px;
+    }
+    
+    .negative-top-margin {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1400px){
+   
+    .idea-spacer{
+        height: 0 !important;
+    }
+}
+
+/* ====== Koa Health Explorations pages ====== */
+.explorations-identity-blockquote{
+    background-color: #ececec;
+    font-size: 20px;
+}
+
+@media (min-width: 1200px){
+    .explorations-identity-blockquote{
+        margin: 2em;
+        margin-top: -150px;
+        
+    }
+}
+
+@media (max-width: 1199px){
+    .explorations-identity-blockquote{
+        margin: 0;
+        margin-top: -25px;
+    }
+}
+
+.explorations-text-container{
+    max-width: 700px;
+}
+
+.explorations-content-centered .wp-block-group__inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+.explorations-content-centered .wp-block-columns{
+    justify-content: center;
+}
+
+
+@media(max-width: 599px){
+    .explorations-content-centered .wp-block-column{
+        margin-bottom: 60px;
+    }
+}
+
+@media(min-width: 922px) and (max-width: 1100px){
+    .explorations-content-centered h3{
+        font-size: 1.2em;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 781px){
+
+    .explorations-content-centered .wp-block-column:last-child{
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    .explorations-content-centered  .wp-block-column:last-child{
+        flex-basis: calc(50% - 1em) !important;
+        flex-grow: 1;
+    }
+
+      .explorations-content-centered  div:nth-child(3) > div:nth-child(2){
+        margin-left: 15px;
+    }
+
+    .explorations-content-centered  div:nth-child(3) > div:nth-child(1){
+        margin-right: 15px;
+    }
+
+
+
+}
+
+.explorations-hr{
+    border-top: none;
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+
+
+/* ====== Explorations page filter ===== */
+
+#explorations .ultp-heading-filter .ultp-filter-navigation{
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+#explorations .ultp-flex-menu{
+    display: flex;
+}
+
+#explorations .filter-item{
+    display: flex;
+}
+
+
+@media (max-width: 768px){
+    #explorations .ultp-heading-filter .ultp-filter-navigation {
+        position: absolute;
+
+    }
+
+    #explorations .ultp-flex-menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    #explorations .flexMenu-popup{
+        right: 0;
+    }
+}
+
+
+
+/* ====== Altered Parenthood ====== */
+
+.altered-parenthood-hero{
+    margin: 0 auto;
+    max-width: 1480px;
+}
+
+
+
+/* ===== Propositions ====== */
+
+.propositions-spacer-color{
+    height: 70px;
+}
+
+.prepositions-image-text-group img{
+    
+}
+
+.prepositions-text-block{
+    position: absolute;
+    margin-top: -15%;
+    margin-left: 15%;
+    background-color: #ffffffd6;
+    padding: 20px;
+    max-width: 40%;
+
+}
+
+@media (max-width: 1024px){
+    .prepositions-text-block{
+         max-width: 100%;
+    }
+}
+
+.prepositions-image-text-group,
+.prepositions-image-text-group-left{
+    min-height: 550px;
+   
+}
+
+.prepositions-text-block-left{
+    position: absolute;
+    margin-top: 10%;
+    background-color: #ffffffd6;
+    padding: 20px;
+    width: 45%;
+}
+
+.prepositions-image-text-group-left img{
+    float: right;
+}
+
+@media (min-width: 921px){
+    .prepositions-image-text-group-left img{
+        margin-right: 16%;
+    }
+}
+
+
+@media (max-width: 1024px){
+
+
+    .prepositions-column-group .extra-right-padding{
+        padding-right: 0;
+    }
+    
+    .prepositions-text-block{
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+
+
+    .prepositions-text-block-left{
+        margin-top: 30%;
+        margin-left: 20px;
+    }
+
+    .prepositions-text-block-left{
+        width: 90%;
+    }
+
+    .prepositions-image-text-group img,
+    .prepositions-image-text-group-left img{
+        width: 100%;
+    }
+    
+    .prepositions-column-group{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .prepositions-left-column-title-group{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .prepositions-image-text-group{
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media (min-width: 600px) and (max-width: 1024px){
+    
+    .prepositions-left-column-title-group{
+        margin-left: 5%;
+        margin-right: 20px;
+    }
+
+    .prepositions-left-column-title-group-left{
+        margin-left: 5%;
+        margin-right: 20px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1500px){
+     .prepositions-column-group{
+            margin-bottom: 20px;
+        }
+}
+
+/* ===== Koa Health Related Content ===== */ 
+
+.unit-posts-related-content img{
+     max-height: 350px;
+    overflow: hidden;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.unit-posts-related-content   .uagb-post__title:after {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background-color: #F09C77;
+    content: "";
+    margin-top: 8px;
+}
+
+
+/* ====== Services Pages ===== */
+
+.services-content-centered{
+    display:flex;
+    justify-content: center;
+}
+
+
+.services-hr{
+    display: block;
+    height: 6px;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.service-hero-title{
+    text-shadow: 1px 1px 1px #00000063, 0 0 1em #000;
+
+}
+
+.services-hr-text{
+    display: block;
+    height: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.services-text {
+    line-height: 1.3;
+}
+
+.services-extra-paddings{
+    padding-left: 4%;
+    padding-right: 4%;
+
+}
+
+.service-flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch !important;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 921){
+    .service-spacer{
+        height: 30px;
+    }
+}
+
+
+@media (max-width: 1199px){
+    .services-extra-paddings{
+        padding-left: 1%;
+        padding-right: 1%;
+
+    }
+}
+
+/* ===== Services pages - Hold =====*/
+
+@media (min-width: 1280px){
+
+    .hold-text-right{
+        margin-left: -60px !important;
+        margin-top: 50px;
+    }
+}
+
+
+@media (max-width: 1279px){
+
+    .hold-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+     .hold-text p{
+        font-size: 22px !important;
+        line-height: 1.2;
+        margin-top: 20px;
+    }
+
+}
+
+
+.hold-text-left{
+
+}
+
+.hold-separator{
+    height: 4px;
+    width: 50%;
+}
+
+
+
+@media (max-width: 921px){
+    .service-hero-section{
+        display: flex;
+        flex-direction: column;
+        padding-right: 30px;
+    }
+
+     .service-hero-section .wp-block-column:last-child{ 
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+     }
+
+}
+
+@media (max-width: 599px){
+    .service-hero-section{
+        padding-left: 30px;
+    }
+}
+
+
+
+/* ===== Popup layouts ===== */
+
+.popup-paddings{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* ===== Koa Health Main =====*/
+
+.people-left-margin{
+
+}
+
+@media(max-width: 767px){
+    .tab-spacer{
+        height: 20px;
+    }
+    .home-block {
+        min-height: 280px;
+    }
+
+    
+}
+
+
+.tax-koa_health_category .ast-primary-header-bar {
+    background-color: #E660B0;
+}
+
+
+
+/* ===== Minisite Begin ===== */
+/* ========================== */
+
+
+/* ===== Begin Main css =====*/
+
+
+.tax-site_begin_category .ast-primary-header-bar {
+    background-color: #9CC3DB;
+}
+
+
+

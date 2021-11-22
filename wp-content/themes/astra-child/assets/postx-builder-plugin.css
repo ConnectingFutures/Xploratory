@@ -1,0 +1,42 @@
+/* ------ Post-X builder plugin CSS ------*/
+
+#custom-category{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+
+@media (max-width: 912px){
+	#custom-category{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	#custom-category-sidebar{
+		width: 100%;
+	}
+
+	#custom-category-main{
+		width: 100%;
+	}
+}
+
+#custom-category-sidebar{
+	width: 20%;
+}
+
+#custom-category-main{
+	width: 80%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+#custom-category-sidebar #secondary{
+    width: 100%;
+}
+
+.custom-header-color{
+	background-color: #e660b0;
+}
