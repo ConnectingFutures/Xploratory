@@ -30,8 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- #page -->
 <?php 
 	astra_body_bottom();    
-	wp_footer(); 
+	wp_footer();
 ?>
-
 	</body>
 </html>

@@ -36,7 +36,7 @@ class Notice {
 		if (!wp_verify_nonce($_REQUEST['wpnonce'], 'ultp-free-nonce')) {
 			return ;
         }
-        set_transient( 'ultp_get_pro_notice_v15', 'off', 2592000 ); // 30 days notice
+        set_transient( 'ultp_get_pro_notice_v16', 'off', 2592000 ); // 30 days notice
 	}
 
 
@@ -48,7 +48,7 @@ class Notice {
 	 * @return STRING
 	 */
 	public function ultp_installation_notice_callback() {
-		if (get_transient('ultp_get_pro_notice_v15') != 'off' && (!defined('ULTP_PRO_VER'))) {
+		if (get_transient('ultp_get_pro_notice_v16') != 'off' && (!defined('ULTP_PRO_VER'))) {
 			$this->ultp_notice_css();
 			$this->ultp_notice_js();
 			?>

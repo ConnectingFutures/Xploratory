@@ -9,6 +9,10 @@ $width = $width ? $width : '1140';
 	<?php
 		while ( have_posts() ) : the_post();
 			the_content();
+
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
 		endwhile;
 	?>
 </div>

@@ -373,7 +373,7 @@ class SlideBackground {
 
         $sources[] = Html::tag('img', $imageAttributes, '', false);
 
-        $picture = '<picture>' . implode('', $sources) . '</picture>';
+        $picture = HTML::tag('picture', Html::addExcludeLazyLoadAttributes(), implode('', $sources));
 
         $originalImage = Html::tag('div', $attributes, $picture);
 
@@ -386,7 +386,9 @@ class SlideBackground {
                 $blurFit                        = $this->slider->params->get('backgroundBlurFit', 7);
                 $attributes['data-blurfitmode'] = 'default';
             }
-            $picture      = "<picture style='filter:blur(" . $blurFit . "px)'>" . implode('', $sources) . "</picture>";
+            $picture      = HTML::tag('picture', Html::addExcludeLazyLoadAttributes(array(
+                'style' => 'filter:blur(' . $blurFit . 'px)'
+            )), implode('', $sources));
             $blurFitStyle = array(
                 'margin:-' . ($blurFit * 2) . 'px',
                 'padding:' . ($blurFit * 2) . 'px'

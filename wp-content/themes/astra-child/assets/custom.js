@@ -13,6 +13,16 @@ jQuery(document).ready(function(){
         ]
     });
 
+
+
+    jQuery('#new-main-menu-btn').click(function(){
+        jQuery(this).toggleClass('menu-toggled');
+        jQuery('#myTopnav').toggle();
+    });
+
+
+
+
     if (jQuery('.ast-merged-advanced-header').length) {
         jQuery('#content').addClass('with-fixed-header');
     }
@@ -92,7 +102,25 @@ jQuery(document).ready(function(){
 
         jQuery('.accordion-title-main-wrapper').click(function(){
             jQuery(this).toggleClass('clicked');
-           jQuery(this).closest('.wp-block-columns').siblings('.wp-block-columns').toggle();
+            jQuery(this).closest('.wp-block-columns').siblings('.wp-block-columns').toggle();
         });
     }
+    
+    jQuery('#top-navigation-primary li').each(function(){
+        jQuery(this).hover(function(event){
+            if (jQuery(this).attr('id') != 'menu-item-12037') {
+                jQuery('.second-menu').removeClass('visible');
+            } else {
+                jQuery('.second-menu').addClass('visible');
+            }
+        });
+    });
+
+    jQuery('.second-menu').hover(function(){
+        jQuery('.second-menu').addClass('visible');
+    });
+    jQuery('.second-menu').mouseleave(function(event){
+        jQuery('.second-menu').removeClass('visible');
+    });
 });
+

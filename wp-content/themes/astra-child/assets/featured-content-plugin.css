@@ -54,7 +54,7 @@
         left: -5px;
     }
     .featured-content-wrapper .slick-arrow.slick-next {
-        left: 88%;
+        left: 97%;
     }
 }
 .featured-content-wrapper,
@@ -102,6 +102,14 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+
+@media (max-width: 599px){
+	.filter-term-item {
+		margin: 0;
+	}
+}
+
 
 .featured-content-wrapper .article-item {
     width: 100%;
@@ -204,14 +212,17 @@
 
 .featured-content-wrapper .article-item,
 .our_explorations_content-wrapper .article-item {
-    width: 33.3%;
-    padding: 0 50px 70px 0;
+    width: 25%;
+    padding: 0 40px 50px 0;
 }
 
 .our_explorations__block-wrapper h3,
 .our_explorations_content-wrapper .article-item h4{
     font-weight:600;
     text-transform:uppercase;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -223,7 +234,7 @@
         margin: 0;
     }
     .featured-content-wrapper {
-        padding: 0 55px;
+        padding: 0 0 0 55px;
     }
 }
 
@@ -236,6 +247,7 @@
     margin: 0;
     padding: 0;
     color: #000;
+	text-transform: uppercase;
 }
 
 .our-explorations-filter-wrapper li {
@@ -243,12 +255,12 @@
 }
 
 .our-explorations-filter-wrapper {
-    border-top: 1px solid #000;
+    border-top: none;
     padding-top: 20px;
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid #ececec;
     padding-bottom: 20px;
     margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .our-explorations-filter-wrapper .article-item h4 {
@@ -256,8 +268,8 @@
 }
 
 .our_explorations_content-wrapper .article-item-category {
-    border-bottom: 3px solid #F09C77;
-    padding-top: 30px;
+    border-bottom: 2px solid #F09C77;
+    padding-top: 0;
     margin-bottom: 20px;
 }
 
@@ -267,6 +279,8 @@
 
 .our_explorations_content-wrapper .article-item-description {
     color: #000 !important;
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 
@@ -312,10 +326,14 @@
         left: 400px;
     }
 
-    .featured-content-wrapper .article-item,
-    .our_explorations_content-wrapper .article-item {
+    .featured-content-wrapper .article-item {
         width: 33.33%;
     }
+	
+	.our_explorations_content-wrapper .article-item {
+        width: 25%;
+    }
+
 
     .block-content-mg-bottom .wp-block-columns:first-child {
         margin-bottom: 70px;
@@ -392,4 +410,17 @@
         width: 42px;
         right: -45px;
     }
+}
+
+
+.read-more{
+    background: #000;
+    max-width: 250px;
+    padding: 10px 24px;
+    margin-top: 20px;
+}
+
+.read-more a{
+    color: #ececec;
+    text-transform: uppercase;
 }

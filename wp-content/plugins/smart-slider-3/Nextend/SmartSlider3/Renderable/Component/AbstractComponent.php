@@ -113,7 +113,7 @@ abstract class AbstractComponent {
     }
 
     /**
-     * @return AbstractRenderableOwner
+     * @return Slide
      */
     public function getOwner() {
         return $this->owner;

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-08 13:54+0200\n"
-"PO-Revision-Date: 2021-09-09 18:27+0200\n"
+"POT-Creation-Date: 2021-10-16 08:50+0200\n"
+"PO-Revision-Date: 2021-11-02 14:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -306,7 +306,7 @@ msgid "Stretch"
 msgstr "Estirar"
 
 msgid "Center"
-msgstr "Centrar"
+msgstr "Centro"
 
 msgid "Slider's default"
 msgstr "Slider por defecto"
@@ -1465,6 +1465,19 @@ msgstr "uno por línea"
 msgid "The cache of the posts with the given ID will be cleared upon save."
 msgstr "El cache de los artículos que tienen un ID se limpiará al grabar."
 
+msgid "Fallback slider"
+msgstr "Slider de resguardo (fallback)"
+
+msgid "ID or Alias"
+msgstr "ID o Alias"
+
+msgid ""
+"Select another slider by its ID or Alias that displays if your current "
+"slider has no published slides."
+msgstr ""
+"Selecciona otro slider por su ID o Alias para mostrar si tu slider actual no "
+"tiene slides publicados."
+
 msgid "Thumbnail"
 msgstr "Miniatura"
 
@@ -1565,6 +1578,9 @@ msgstr "Optimizar"
 msgid "Loading"
 msgstr "Carga"
 
+msgid "Loading type"
+msgstr "Tipo de carga"
+
 msgid "Instant"
 msgstr "Al instante"
 
@@ -1573,9 +1589,6 @@ msgstr "Después de que la página sea cargada"
 
 msgid "After delay"
 msgstr "Después de un retraso"
-
-msgid "Loading type"
-msgstr "Tipo de carga"
 
 msgid ""
 "If your slider is above the fold, you can load it immediately. Otherwise, "
@@ -1771,6 +1784,9 @@ msgid ""
 msgstr ""
 "Si el tamaño de tus imágenes no es el mismo que el de tu slider, puedes "
 "mejorar el resultado con los modos de relleno."
+
+msgid "Background Blur"
+msgstr "Desenfoque de fondo"
 
 msgid "Randomize"
 msgstr "Aleatorio"
@@ -2345,6 +2361,9 @@ msgid ""
 msgstr ""
 "Por favor consulta %1$snuestra guía detallada%2$s sobre como colocar tu "
 "propio fondo del slide correctamente."
+
+msgid "Background blur"
+msgstr "Desenfoque de fondo"
 
 msgid "Blur"
 msgstr "Desenfocar"
@@ -4036,6 +4055,15 @@ msgstr ""
 "Si desactivas esta opción, no podrás cambiar del primer slide hacia el "
 "último."
 
+msgid ""
+"Background animations only work on the slide background images, which have "
+"Fill selected at their Fill mode. They don't affect any images if the "
+"background parallax is enabled."
+msgstr ""
+"Las animaciones de fondo funcionan únicamente en las imágenes de fondo del "
+"slide que tienen seleccionada la opción \"rellenar\". No afecta ninguna "
+"imagen si el parallax de fondo está activado."
+
 msgid "Shifted"
 msgstr "Cambiado"
 
@@ -4188,6 +4216,42 @@ msgstr "Elástico aleatorio"
 
 msgid "My text animations"
 msgstr "Mis animaciones de texto"
+
+msgid "Morph - Wave"
+msgstr "Transformar - Ola"
+
+msgid "Morph - Brush"
+msgstr "Transformar - Pincel"
+
+msgid "Morph - Flow"
+msgstr "Transformar - Flujo"
+
+msgid "Morph - Noise"
+msgstr "Transformar - Ruido"
+
+msgid "Distortion - Mosaic"
+msgstr "Distorsión - Mosaico"
+
+msgid "Distortion - Triangle"
+msgstr "Distorsión - Triángulo"
+
+msgid "Distortion - Flow"
+msgstr "Distorsión - Flujo"
+
+msgid "Distortion - Warp"
+msgstr "Distorsión - Warp"
+
+msgid "Distortion - Storm"
+msgstr "Distorsión - Tormenta"
+
+msgid "Distortion - Wave"
+msgstr "Distorsión - Ola"
+
+msgid "Distortion - Shard"
+msgstr "Distorsión - Fragmento"
+
+msgid "Distortion - Noise"
+msgstr "Distorsión - Ruido"
 
 msgid "Slices - Single"
 msgstr "Cortes - Simple"
@@ -5742,10 +5806,10 @@ msgid "Pulse"
 msgstr "Pulso"
 
 msgid "Flip left"
-msgstr "Tirar a la izquierda"
+msgstr "Tirar desde la izquierda"
 
 msgid "Flip right"
-msgstr "Tirar a la derecha"
+msgstr "Tirar desde la derecha"
 
 msgid "Flip down"
 msgstr "Tirar hacia abajo"
@@ -5781,10 +5845,10 @@ msgid "Bounce in"
 msgstr "Rebotar hacia adentro"
 
 msgid "Bounce in left"
-msgstr "Rebotar a la izquierda"
+msgstr "Rebotar desde la izquierda"
 
 msgid "Bounce in right"
-msgstr "Rebotar a la derecha"
+msgstr "Rebotar desde la derecha"
 
 msgid "Bounce in down"
 msgstr "Rebotar hacia abajo"
@@ -5900,6 +5964,99 @@ msgstr "Progreso"
 msgid "Time"
 msgstr "Tiempo"
 
+msgid "Icon Size"
+msgstr "Tamaño del ícono"
+
+msgid "Before After"
+msgstr "Antes despúes"
+
+msgid "Left top"
+msgstr "Superior izquierda"
+
+msgid "Center top"
+msgstr "Superior central"
+
+msgid "Right top"
+msgstr "Superior derecha"
+
+msgid "Left center"
+msgstr "Centro izquierda"
+
+msgid "Right Center"
+msgstr "Centro derecha"
+
+msgid "Left bottom"
+msgstr "Inferior izquierda"
+
+msgid "Center bottom"
+msgstr "Inferior central"
+
+msgid "Right bottom"
+msgstr "Inferior derecha"
+
+msgid "Before Image"
+msgstr "Imagen antes"
+
+msgid "After Image"
+msgstr "Imagen después"
+
+msgid "Labels"
+msgstr "Etiquetas"
+
+msgid "Show Label"
+msgstr "Mostrar etiqueta"
+
+msgid "Always"
+msgstr "Siempre"
+
+msgid "Before label"
+msgstr "Etiqueta antes"
+
+msgid "After label"
+msgstr "Etiqueta despúes"
+
+msgid "Behavior"
+msgstr "Comportamiento"
+
+msgid "Interaction"
+msgstr "Interacción"
+
+msgid "Divider"
+msgstr "Divisor"
+
+msgid "Line"
+msgstr "Línea"
+
+msgid "Show Caption"
+msgstr "Mostrar leyenda"
+
+msgid "Caption text"
+msgstr "Leyenda"
+
+msgid "2"
+msgstr "2"
+
+msgid "4"
+msgstr "4"
+
+msgid "6"
+msgstr "6"
+
+msgid "8"
+msgstr "8"
+
+msgid "10"
+msgstr "10"
+
+msgid "Before image alt tag"
+msgstr "Alt de imagen antes"
+
+msgid "After image alt tag"
+msgstr "Alt de imagen después"
+
+msgid "Optimize images"
+msgstr "Optimizar imágenes"
+
 msgid "Full"
 msgstr "Completo"
 
@@ -5932,9 +6089,6 @@ msgstr "Color activo"
 
 msgid "Stroke width"
 msgstr "Ancho del trazado"
-
-msgid "Labels"
-msgstr "Etiquetas"
 
 msgid "Inner before"
 msgstr "Dentro antes"
@@ -6271,7 +6425,7 @@ msgid ""
 "so we only suggest using this layer if you are a developer!"
 msgstr ""
 "Por favor ten en cuenta que <b>no damos soporte</b> sobre la capa de módulos "
-"de Joomla.<b>El código que carga el modulo con frecuencia necesita código "
+"de Joomla.<br>El código que carga el modulo con frecuencia necesita código "
 "personalizado que debes escribir, ¡te sugerimos que utilices esta capa solo "
 "sí eres un desarrollador!"
 
@@ -7027,9 +7181,6 @@ msgstr "Color de la barra"
 
 #~ msgid "Bottom Right"
 #~ msgstr "Abajo a la derecha"
-
-#~ msgid "Outer Bottom"
-#~ msgstr "Parte exterior inferior"
 
 #~ msgid "Text Animation In"
 #~ msgstr "Animación del texto dentro"

@@ -99,11 +99,18 @@ class Post_Grid_1{
             //--------------------------
             //      General Setting
             //--------------------------
+            'gridStyle' => [
+                'type' => 'string',
+                'default' => 'style1',
+            ],
             'columns' => [
                 'type' => 'object',
                 'default' => (object)['lg' =>'2'],
                 'style' => [
                     (object)[
+                        'depends' => [
+                            (object)['key'=>'gridStyle','condition'=>'==','value'=>['style1', 'style2']],
+                        ],
                         'selector'=>'{{ULTP}}.wp-block-ultimate-post-post-grid-1 .ultp-block-row.ultp-block-items-wrap { grid-template-columns: repeat({{columns}}, 1fr); }'
                     ],
                 ],
@@ -1485,6 +1492,11 @@ class Post_Grid_1{
                 'default' => (ultimate_post()->get_setting('disable_image_size') == 'yes' ? 'full' : 'ultp_layout_landscape'),
                 'depends' => [(object)['key' => 'showImage','condition' => '==','value' => 'true']]
             ],
+            'imgCropSmall' => [
+                'type' => 'string',
+                'default' => (ultimate_post()->get_setting('disable_image_size') == 'yes' ? 'full' : 'ultp_layout_square'),
+                'depends' => [(object)['key' => 'showImage','condition' => '==','value' => 'true']]
+            ],
             'imgWidth' => [
                 'type' => 'object',
                 'default' => (object)['lg' =>'', 'unit' =>'%'],
@@ -2544,7 +2556,10 @@ class Post_Grid_1{
                             $wraper_before .= '</div>';
                         $wraper_before .= '</div>';
                     }
-                    $wraper_before .= '<div class="ultp-block-items-wrap ultp-block-row ultp-block-column-'.json_decode(json_encode($attr['columns']), True)['lg'].' ultp-'.$attr['layout'].'">';
+
+                    $colClass = ($attr['gridStyle'] == 'style1' || $attr['gridStyle'] == 'style2') ? 'ultp-block-column-'.json_decode(json_encode($attr['columns']), True)['lg'] : '';
+
+                    $wraper_before .= '<div class="ultp-block-items-wrap ultp-block-row ultp-pg1a-'.$attr['gridStyle'].' '.$colClass.' ultp-'.$attr['layout'].'">';
                         $idx = $noAjax ? 1 : 0;
                         while ( $recent_posts->have_posts() ): $recent_posts->the_post();
                             
@@ -2558,7 +2573,13 @@ class Post_Grid_1{
                                 $post_loop .= '<div class="ultp-block-content-wrap">';
                                     if( has_post_thumbnail() && $attr['showImage'] && ( $attr['layout'] != 'layout2') ) {
                                         $post_loop .= '<div class="ultp-block-image ultp-block-image-'.$attr['imgAnimation'].($attr["imgOverlay"] ? ' ultp-block-image-overlay ultp-block-image-'.$attr["imgOverlayType"].' ultp-block-image-'.$attr["imgOverlayType"].$idx : '' ).'">';
-                                            $post_loop .= '<a href="'.$titlelink.'" '.($attr['openInTab'] ? 'target="_blank"' : '').'>'.ultimate_post()->get_image($post_thumb_id, $attr['imgCrop'], '', $title, $attr['imgSrcset'], $attr['imgLazy']).'</a>';
+                                            $post_loop .= '<a href="'.$titlelink.'" '.($attr['openInTab'] ? 'target="_blank"' : '').'>';
+                                            $imgSize = (($attr['gridStyle'] == 'style1') ||
+                                                ($attr['gridStyle'] == 'style2' && $idx == 0) ||
+                                                ($attr['gridStyle'] == 'style3' && $idx%3 == 0) ||
+                                                ($attr['gridStyle'] == 'style4' && ($idx == 0 || $idx == 1))) ? $attr['imgCrop'] : $attr['imgCropSmall'];
+                                            $post_loop .= ultimate_post()->get_image($post_thumb_id, $imgSize, '', $title, $attr['imgSrcset'], $attr['imgLazy']);
+                                            $post_loop .= '</a>';
                                             if( ($attr['catPosition'] != 'aboveTitle') && $attr['catShow'] ) {
                                                 $post_loop .= '<div class="ultp-category-img-grid">'.$category.'</div>';
                                             }

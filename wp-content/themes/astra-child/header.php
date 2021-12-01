@@ -45,6 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	astra_header_before(); 
 
 	astra_header();
+	get_template_part( 'template-parts/dropdown-main', 'menu' );
 	
 	the_breadcrumb();
 	astra_header_after();

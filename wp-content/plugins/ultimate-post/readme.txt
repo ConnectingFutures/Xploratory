@@ -1,10 +1,10 @@
 ===  PostX - Gutenberg Blocks for Post Grid ===
 Contributors: wpxpo, anik4e, jakirhasan
-Tags: display posts, custom post grid, gutenberg blocks, post grid, popular posts, trending post, content views, news, magazine, post list, gutenberg, gutenberg block, contextual related posts, post slider, wp show posts, content types, category list, category posts, recent posts 
-Requires at least: 5.0    
+Tags: display posts, custom post grid, gutenberg blocks, post grid, popular posts, trending post, content views, news, magazine, post list, gutenberg, gutenberg block, contextual related posts, post slider, wp show posts, content types, category list, category posts, recent posts
+Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 5.4
-Stable tag: 2.4.15
+Stable tag: 2.4.16
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,9 +13,9 @@ Gutenberg post Grid blocks allows you to display latest post, post grid, custom 
 == Description ==
 
 = PostX is an advanced all in one Post Blocks Building Tool =
- 
+
 👉 Learn More About PostX(Pro): [All The Features of PostX](https://www.wpxpo.com/postx/) 🔥
-👉 Official PostX Demo: [View Demo](https://ultp.wpxpo.com/blocks/) 💥 
+👉 Official PostX Demo: [View Demo](https://ultp.wpxpo.com/blocks/) 💥
 👉 Readymade Design Library: [Design Library](https://ultp.wpxpo.com/starter-packs/) 💪
 
 PostX is a highly customizable Gutenberg Post Block Plugins, anyone can create Post grid blocks, Post Listing Blocks, Post Slider Blocks, News Blocks, Magazine Blocks, And Post Carousel with ease.
@@ -26,7 +26,7 @@ PostX allows for the seamless creation and customization of Post Blocks, making 
 [youtube https://www.youtube.com/watch?v=_GfXTvSdJTk]
 
 ### 🔥 Live Editable Gutenberg Blocks
-Each and every setting are visually editable in Gutenberg Post Blocks. You can change your blocks design of the post with ultimate design settings. An enormous amount of google font has been added for your section design. You don't have enough design skills? No problem, preset sections blocks and layouts blocks are ready for your needs. 
+Each and every setting are visually editable in Gutenberg Post Blocks. You can change your blocks design of the post with ultimate design settings. An enormous amount of google font has been added for your section design. You don't have enough design skills? No problem, preset sections blocks and layouts blocks are ready for your needs.
 
 ### What you can be made using this plugin?
 &#9989; News
@@ -40,7 +40,7 @@ Each and every setting are visually editable in Gutenberg Post Blocks. You can c
 
 ### Gutenberg Post Blocks Key Feature
 
-These Gutenberg post blocks come with a lot of key features. 
+These Gutenberg post blocks come with a lot of key features.
 
 * Category and Tag Filter in Gutenberg Blocks
 * Gutenberg Archive Builder [PRO]
@@ -64,7 +64,7 @@ These Gutenberg post blocks come with a lot of key features.
 * Advanced Typography Control in Blocks
 * Animation Support in Blocks
 * Custom CSS Option in Every Blocks
-* Section Title with a lot of preset design 
+* Section Title with a lot of preset design
 * Gutenberg Post Blocks Compatible Within Shortcode
 * Progress Bar [PRO]
 * Yoast Meta Support Addons [PRO]
@@ -81,10 +81,10 @@ WordPress custom taxonomy query support for Gutenberg Post Blocks. So you can us
 Now you can convert any blocks into a shortcode. So you can use any blocks inside a page builder like Divi Builder, Beaver Builder, Visual Composer, Elementor, Themify Builder, etc. via shortcode.
 
 ### 🏆 Gutenberg Post Blocks and Elementor Integration
-Gutenberg Post Blocks can be used within Elementor plugin. Now Elementor user can easily edit any Gutenberg Blocks within Elementor page.  
+Gutenberg Post Blocks can be used within Elementor plugin. Now Elementor user can easily edit any Gutenberg Blocks within Elementor page.
 
 ### 🏆 Post Slider Blocks
-Dynamic slider using display posts is now easier to make using Gutenberg post blocks. Post slider will be run with your control, your desire design. Post Grid blocks come with ultimate control over the modern design. 
+Dynamic slider using display posts is now easier to make using Gutenberg post blocks. Post slider will be run with your control, your desire design. Post Grid blocks come with ultimate control over the modern design.
 
 ### 🏆 Progress Bar
 Let the users see a graphical indicator to know the reading progress of a blog post.
@@ -113,7 +113,7 @@ The PostX Gutenberg Post Blocks is an all-in-one plugin to create or customize W
 Build your News, Magazine, and Blog website within a few minutes using our premade Starter packs and Blocks design.
 
 ### 🏆 Advanced Query Builder
-Using Gutenberg Post Blocks query builder you can create a complex query for your post grid. Anyone can create complex queries for every block without writing a single line of code. 
+Using Gutenberg Post Blocks query builder you can create a complex query for your post grid. Anyone can create complex queries for every block without writing a single line of code.
 
 ### 🏆 AJAX Pagination
 Pagination, Load More and Next Previous are common elements for the blocks. Gutenberg Post Blocks grid comes with the AJAX powered pagination.
@@ -150,9 +150,9 @@ Developed by [WPXPO](https://www.wpxpo.com). [Contribute to Gutenberg Post Block
 - Join our [Facebook Group](https://www.facebook.com/groups/gutenbergpostx).
 - Learn from our tutorials on [YouTube Channel](https://www.youtube.com/channel/UC9I7kzTtG31YlWdG3iL42Jg).
 
-### 📗 Translations 
+### 📗 Translations
 
-PostX plugin is compatible with WPML Plugin and also it works perfectly with loco translate plugin. 
+PostX plugin is compatible with WPML Plugin and also it works perfectly with loco translate plugin.
 You can Translate PostX on [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/ultimate-post/).
 
 
@@ -166,7 +166,7 @@ You can Translate PostX on [translate.wordpress.org](https://translate.wordpress
 
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t even need to leave your web browser. 
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t even need to leave your web browser.
 
 1. Go to your WordPress Plugin installation menu (Dashboard > Plugins > Add New)
 2. In the search field type Gutenberg Post Blocks” and press enter.
@@ -192,7 +192,7 @@ Sometimes because of the permalink issue during the plugin update, just go to Wo
 
 = Is this a Gutenberg Blocks plugin? =
 
-Yes, but it is a Gutenberg Post Block plugin.  It displays the dynamic post on your page. 
+Yes, but it is a Gutenberg Post Block plugin.  It displays the dynamic post on your page.
 
 = Where can I request new features? =
 
@@ -217,9 +217,15 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 6. Starter Packs Import
 
 == Changelog ==
+= 2.4.16 - 22 November 2021 =
+* New: 4 grid style add for Post Grid #1
+* Fix: Post Grid 1 Layout Issue
+* Fix: Post Sliders Arrow RTL Issue
+* Fix: Paginations Load More Animation Alignment Issue
+* Update: PostX Templates Comment Option
 
 = 2.4.15 - 09 November 2021 =
-* New: Reading Time Meta Translate 
+* New: Reading Time Meta Translate
 * Fix: Next Previous Pagination Issue
 * Fix: Image Size Not Working Issue
 
@@ -295,7 +301,7 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * Fix: Heading Image Issue
 
 = 2.4.3 -  19 June 2021 =
-* Fix: Quick Post Slider issue 
+* Fix: Quick Post Slider issue
 
 = 2.4.2 -  17 June 2021 =
 * New: Exclude current post automatic from query
@@ -303,7 +309,7 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * Fix: Post Module #1 & Post Module #2 blank image issue
 * Fix: Unnecessary image flip option removed
 * Fix: Grid height issue
-* Fix: Post List #2 empty image spacing issue 
+* Fix: Post List #2 empty image spacing issue
 * Fix: Modal popup content scroll issue
 * Fix: Post Grid 5&6 Responsive issue
 * Update: View Count issue
@@ -318,7 +324,7 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * Fix: Post Grid #5 & Post Grid #6 fullscreen issue
 * Fix: Version Compatibility PHP Warning issue
 * Fix: Setting Change disable Addon issue
-* Update: Menu Name Change 
+* Update: Menu Name Change
 * Update: Documentation URL change
 
 = 2.3.1 - 31 May 2021 =
@@ -343,14 +349,14 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * New: PostX compatible with WPML
 * New: PostX compatible with Loco
 * Fix: Some translation issue
-* Fix: Post Grid Read More Issue 
+* Fix: Post Grid Read More Issue
 * Update: Update all JS Translation String
 
 = 2.2.6 - 06 April 2021 =
 * New: Taxonomy Blocks Added
 * New: Pagination Next Previous Text
 * New: HTML Tag Settings Add in Section
-* Update: Excerpt Limit 
+* Update: Excerpt Limit
 * Fix: Some Translation Issue
 
 = 2.2.5 - 02 March 2021 =
@@ -398,7 +404,7 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * Fix: WordPress 5.6 Warning register_rest_route Issue
 * Fix: Settings Save Issue
 * Fix: CSS Minified to Single File
-* Fix: JS Minified to Single File 
+* Fix: JS Minified to Single File
 * Fix: Filter Dropdown Issue
 * Fix: Navigation Arrow Issue
 * Update: Dashicon Removed From Frontend
@@ -573,10 +579,10 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * Fix: Post Grid #3 CSS issue Fixed
 
 = 1.1.3 - 14 May 2020 =
-* New: Added New Layout Named Fashion for Fashion website and Fashion Blocks 
+* New: Added New Layout Named Fashion for Fashion website and Fashion Blocks
 * Update: Update Import Layout Popup
 * Fix: Navigation Color Issue Fixed
-* Fix: Font Typography Default Issue Fixed 
+* Fix: Font Typography Default Issue Fixed
 * Fix: Pagination Color Issue Fixed
 
 = 1.1.2 - 10 May 2020 =
@@ -584,7 +590,7 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * New: Custom Post Type Added in Query
 * New: Post List 2 Inner Content View Style Added
 * New: Post List 3 inner Content View Style Added
-* Fix: Pagination Hover on Mobile Device Issue Fixed 
+* Fix: Pagination Hover on Mobile Device Issue Fixed
 * Fix: Post List 3 Number of Post in Query Save Issue Fixed
 * Fix: Slick Theme CSS issue Fixed
 
@@ -610,7 +616,7 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 * Fix: Fixed Dynamic Post Slider Height Issue
 * Fix: Fixed Pagination Issue
 * Fix: Fixed Post Grid 2 click Issue
-* Fix: Fixed Load More Issue 
+* Fix: Fixed Load More Issue
 * Fix: Fixed Title Issue
 
 
@@ -618,7 +624,7 @@ It is a Gutenberg plugin it works great with WordPress version 5.x.x or more. An
 
 * New: Added Full Excerpt Setting in Post List 1
 * New: Added Full Excerpt Setting in Post List 2
-* New: Added Full Excerpt Setting in Post List 3 
+* New: Added Full Excerpt Setting in Post List 3
 * New: Added Full Excerpt Setting in Post List 4
 
 = 1.0.5 - 22 April 2020 =

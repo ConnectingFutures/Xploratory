@@ -81,7 +81,7 @@ class ItemImageFrontend extends AbstractItemFrontend {
         $style = $owner->addStyle($this->data->get('style'), 'heading');
 
         return Html::tag("div", array(
-            "class" => $style . ' n2-ss-item-image n2-ss-item-content n2-ow-all'
+            "class" => $style . ' n2-ss-item-image-content n2-ss-item-content n2-ow-all'
         ), $this->getLink($html, $linkAttributes));
     }
 }

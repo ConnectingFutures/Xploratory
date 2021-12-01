@@ -898,6 +898,6 @@ class Slide extends AbstractRenderableOwner {
 
         $sources[] = Html::tag('img', $attributes, false);
 
-        return HTML::tag('picture', array(), implode('', $sources));
+        return HTML::tag('picture', Html::addExcludeLazyLoadAttributes(), implode('', $sources));
     }
 }

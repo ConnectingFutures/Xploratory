@@ -11,7 +11,7 @@ function riad_our_explorations_block($attribites)
     $posts_per_page = 9;
 
     $query_posts = get_posts(array(
-        'post_type' => 'post',
+        'post_type' => 'site_begin',
         'posts_per_page' => $posts_per_page,
         'post_status' => 'publish',
     ));
@@ -22,7 +22,6 @@ function riad_our_explorations_block($attribites)
 
     if ($query_posts) {
         $response = '<div class="our_explorations__block-wrapper">';
-        $response .= '<h3>OUR EXPLORATIONS</h3>';
         $response .= include(FC_PLUGIN_DIR . 'template-parts/our-explorations-filters.php');
         $response .= '<div class="our_explorations_content-wrapper">';
 
@@ -32,9 +31,10 @@ function riad_our_explorations_block($attribites)
 
             $response .= '<div class="article-item">';
             $response .= '<a href="' . get_the_permalink($post->ID) . '"><img src=' . get_the_post_thumbnail_url($post->ID) . '></a>';
-            $response .= '<div class="article-item-category"><a href="' . get_category_link($cats[0]->cat_ID) . '">' . $cats[0]->name . '</a></div>';
-            $response .= '<a href="' . get_the_permalink($post->ID) . '"><h4>' . get_the_title($post->ID) . '</h4></a>';
-            $response .= '<span class="article-item-description">' . get_the_excerpt($post->ID) . '</span>';
+            /*$response .= '<div class="article-item-category"><a href="' . get_category_link($cats[0]->cat_ID) . '">' . $cats[0]->name . '</a></div>';*/
+            $response .= '<div class="article-item-category"><a href="' . get_the_permalink($post->ID) . '"><h4>' . get_the_title($post->ID) . '</h4></a></div>';
+            $response .= '<span class="article-item-description">' . get_the_excerpt_max_charlength($post->ID, 120) . '</span>';
+            //$response .= '<span class="article-item-description">' . get_the_excerpt($post->ID) . '</span>';
             $response .= '</div>';
 
         }
@@ -62,10 +62,20 @@ function ajax_filter_explorations()
 
     $args = array(
         'suppress_filters' => true,
-        'post_type' => 'post',
+        'post_type' => 'site_begin',
         'posts_per_page' => -1,
-        'cat' => $cat_id,
+        //'cat' => $cat_id,
     );
+
+    if ($cat_id !== '0') {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'site_begin_category',
+                'field'    => 'id',
+                'terms'    => $cat_id
+            )
+        );
+    }
 
     $loop = new WP_Query($args);
 
@@ -80,7 +90,7 @@ function ajax_filter_explorations()
             $articles .= '<a href="' . get_the_permalink($post_id) . '"><img src=' . get_the_post_thumbnail_url($post_id) . '></a>';
             $articles .= '<div class="article-item-category"><a href="' . get_category_link($cats[0]->cat_ID) . '">' . $cats[0]->name . '</a></div>';
             $articles .= '<a href="' . get_the_permalink($post_id) . '"><h4>' . get_the_title($post_id) . '</h4></a>';
-            $articles .= '<span class="article-item-description">' . get_the_excerpt($post_id) . '</span>';
+            $articles .= '<span class="article-item-description">' . get_the_excerpt_max_charlength($post_id, 120) . '</span>';
             $articles .= '</div>';
 
         endwhile;
@@ -93,4 +103,26 @@ function ajax_filter_explorations()
 
     wp_reset_postdata();
     die($result);
+}
+
+function get_the_excerpt_max_charlength( $post_id, $charlength ){
+    $excerpt = get_the_excerpt($post_id);
+    $charlength++;
+    $response = 'No description';
+
+    if ( mb_strlen( $excerpt ) > $charlength ) {
+        $subex = mb_substr( $excerpt, 0, $charlength - 5 );
+        $exwords = explode( ' ', $subex );
+        $excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+        if ( $excut < 0 ) {
+            $response = mb_substr( $subex, 0, $excut );
+        } else {
+            $response = $subex;
+        }
+        $response .= '[...]';
+    } else {
+        $response = $excerpt;
+    }
+
+    return $response;
 }

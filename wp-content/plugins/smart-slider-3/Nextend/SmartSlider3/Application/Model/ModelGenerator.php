@@ -232,7 +232,7 @@ class ModelGenerator extends AbstractModelTable {
                 ));
                 $vimeo->item->set(array(
                     "vimeourl" => "{url}",
-                    'image'    => ''
+                    'image'    => '{image}'
                 ));
 
                 break;

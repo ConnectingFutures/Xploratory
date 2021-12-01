@@ -34,7 +34,7 @@ add_action('wp_enqueue_scripts', 'child_enqueue_styles', 15);
 
 
 /**
- * CPT People
+ * CPT Koa Health
  */
 
 
@@ -75,6 +75,11 @@ function koa_health_category_register_taxonomy()
 }
 
 
+/**
+ * CPT Begin
+ */
+
+
 add_action('init', 'site_begin_register_cpt');
 
 function site_begin_register_cpt()
@@ -107,8 +112,128 @@ function site_begin_category_register_taxonomy()
         'hierarchical' => true,
         'show_in_rest' => true
     );
-    register_taxonomy('site_begin_category', 'site_begin', $args);
+    register_taxonomy('site_begin_category', array('site_begin'), $args);
 }
+
+
+
+/**
+ * CPT People
+ */
+
+
+add_action('init', 'staff_people_register_cpt');
+
+function staff_people_register_cpt()
+{
+
+    $args = array(
+        'labels' => array(
+            'menu_name' => 'Staff',
+            'name' => 'Staff People'
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'supports' => array('title', 'editor', 'author', 'page-attribute', 'thumbnail','excerpt','custom-fields'),
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'rewrite' => true,
+    );
+    register_post_type('staff_people', $args);
+}
+
+
+add_action('init', 'partners_people_register_cpt');
+
+function partners_people_register_cpt()
+{
+
+    $args = array(
+        'labels' => array(
+            'menu_name' => 'Partners',
+            'name' => 'Partners People'
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'supports' => array('title', 'editor', 'author', 'page-attribute', 'thumbnail','excerpt','custom-fields'),
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'rewrite' => true,
+    );
+    register_post_type('partners_people', $args);
+}
+
+
+add_action('init', 'students_people_register_cpt');
+
+function students_people_register_cpt()
+{
+
+    $args = array(
+        'labels' => array(
+            'menu_name' => 'Students',
+            'name' => 'Students People'
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'supports' => array('title', 'editor', 'author', 'page-attribute', 'thumbnail','excerpt','custom-fields'),
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'rewrite' => true,
+    );
+    register_post_type('students_people', $args);
+}
+
+
+/**
+ * test
+ */
+
+add_action( 'add_meta_boxes', 'true_add_metabox' );
+ 
+function true_add_metabox() {
+ 
+    add_meta_box(
+        'seo_metabox', // ID нашего метабокса
+        'SEO настройки поста', // заголовок
+        'seo_metabox_callback', // функция, которая будет выводить поля в мета боксе
+        'students_people', // типы постов, для которых его подключим
+        'normal', // расположение (normal, side, advanced)
+        'default' // приоритет (default, low, high, core)
+    );
+ 
+}
+
+
+function seo_metabox_callback( $post ) {
+ 
+    // сначала получаем значения этих полей
+    // заголовок
+    $seo_title = get_post_meta( $post->ID, 'seo_title', true );
+    // скрытие от поисковиков
+    $seo_robots = get_post_meta( $post->ID, 'seo_robots', true );
+ 
+    // одноразовые числа, кстати тут нет супер-большой необходимости их использовать
+    wp_nonce_field( 'seopostsettingsupdate-' . $post->ID, '_truenonce' );
+ 
+    echo '<table class="form-table">
+        <tbody>
+            <tr>
+                <th><label for="seo_title">SEO-заголовок</label></th>
+                <td><input type="text" id="seo_title" name="seo_title" value="' . esc_attr( $seo_title ) . '" class="regular-text"></td>
+            </tr>
+            <tr>
+                <th>Скрыть из поисковиков</th>
+                <td>
+                    <label><input type="checkbox" name="seo_robots" ' . checked( 'yes', $seo_robots, false ) . ' /> Да</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>';
+ 
+}
+
+
 
 
 
@@ -241,13 +366,7 @@ function the_breadcrumb()
         echo '</div>';
         echo '</div>';
 
-    } 
-
-
-
-
-
-
+    }
 
 }
 
@@ -269,5 +388,119 @@ function get_term_top_most_parent($term, $taxonomy)
 }
 
 
+/**
+ * Featured content section shortcode
+ * @param $atts
+ * @return string
+ */
+function featured_block_function( $atts ) {
 
-the_excerpt();
+    $params = shortcode_atts(
+        array(
+            'post_type' => 'post',
+            'taxonomy' => 'category',
+            'terms_id' => '',
+        ),
+        $atts
+    );
+
+    $response = '';
+
+    $query_posts = get_posts(array(
+        'post_type' => $params[ 'post_type' ],
+        'posts_per_page' => 8,
+        'post_status' => 'publish',
+    ));
+
+    if (count($query_posts) === 0) {
+        $response = 'No posts';
+    }
+
+    if ($query_posts) {
+        $response = '<div id="shortcode-featured" class="featured-content__block-wrapper">';
+        //$response .= '<h3>Featured content</h3>';
+        ob_start();
+        get_template_part( 'template-parts/featured-content', 'filters', $params );
+        $response .= ob_get_contents();
+        ob_end_clean();
+        $response .= '<div class="featured-content-wrapper">';
+
+        foreach ($query_posts as $post) {
+            setup_postdata($post);
+
+            $response .= '<div class="article-item">';
+            $response .= '<a href="' . get_the_permalink($post->ID) . '"><img src=' . get_the_post_thumbnail_url($post->ID) . '></a>';
+            $response .= '<h4>' . get_the_title($post->ID) . '</h4>';
+            $response .= '<div class="article-excerpt">' . mb_substr( get_the_excerpt($post), 0, 150 ) . ' ...</div>';
+            $response .= '<a href="' . get_the_permalink($post->ID) . '" class="wp-block-button__link has-ast-global-color-1-color has-ast-global-color-0-background-color has-text-color has-background">Read more</a>';
+            $response .= '</div>';
+
+        }
+        $response .= '</div>';
+        $response .= '</div>';
+
+        wp_reset_postdata();
+    }
+
+    return $response;
+}
+
+add_shortcode( 'featured_block', 'featured_block_function' );
+
+
+/**
+ * Ajax filter featured content backend
+ */
+add_action('wp_ajax_nopriv_sc-block-post-filter', 'block_featured_post_filter');
+add_action('wp_ajax_sc-block-post-filter', 'block_featured_post_filter');
+function block_featured_post_filter()
+{
+
+    $cat_id = '';
+    $response = '';
+
+    if (isset($_POST['cat_id'])) {
+        $cat_id = $_POST['cat_id'];
+    }
+
+    if ($cat_id !== '') {
+
+        $query_posts = get_posts(array(
+            'post_type' => 'koa_health',
+            'posts_per_page' => 8,
+            'post_status' => 'publish',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'koa_health_category',
+                    'field' => 'id',
+                    'terms' => $cat_id,
+                ),
+            ),
+        ));
+
+        if (count($query_posts) === 0) {
+            $response = 'No posts';
+        }
+
+        if ($query_posts) {
+
+            foreach ($query_posts as $post) {
+                setup_postdata($post);
+
+                $response .= '<div class="article-item">';
+                $response .= '<a href="' . get_the_permalink($post->ID) . '"><img src=' . get_the_post_thumbnail_url($post->ID) . '></a>';
+                $response .= '<h4>' . get_the_title($post->ID) . '</h4>';
+                $response .= '<div class="article-excerpt">' . mb_substr( get_the_excerpt($post), 0, 150 ) . ' ...</div>';
+                $response .= '<a href="' . get_the_permalink($post->ID) . '" class="wp-block-button__link has-ast-global-color-1-color has-ast-global-color-0-background-color has-text-color has-background">Read more</a>';
+                $response .= '</div>';
+
+            }
+
+            wp_reset_postdata();
+        }
+
+    }
+    echo $response;
+
+    wp_die();
+}

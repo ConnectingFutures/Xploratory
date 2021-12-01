@@ -1443,7 +1443,7 @@ class Post_List_1{
                 'default' => (object)['lg' =>(object)['top' => '','bottom' => '', 'left'=>'','right'=>'', 'unit' =>'px']],
                 'style' => [
                     (object)[
-                        'selector'=>'{{ULTP}} .ultp-block-content { padding: {{contentWrapInnerPadding}}; }'
+                        'selector'=>'{{ULTP}} .ultp-block-content, {{ULTP}} .ultp-block-entry-heading { padding: {{contentWrapInnerPadding}}; }'
                     ],
                 ],
             ],

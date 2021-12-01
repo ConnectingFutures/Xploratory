@@ -310,6 +310,10 @@ class Html {
             if (defined('JETPACK__VERSION')) {
                 $attrs['class'] .= ' jetpack-lazy-image';
             }
+
+            if (defined('PERFMATTERS_VERSION')) {
+                $attrs['class'] .= ' no-lazy';
+            }
         }
 
         return $attrs;

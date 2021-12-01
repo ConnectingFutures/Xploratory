@@ -4,7 +4,7 @@ Tags: slider, wordpress slider, image slider, layer slider, responsive slider, s
 Donate link: https://sites.fastspring.com/nextend/product/smartslider3donate
 Requires at least: 4.9
 Tested up to: 5.8.1
-Stable tag: 3.5.1.1
+Stable tag: 3.5.1.2
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -208,6 +208,19 @@ Of course! Smart Slider use protocol relative urls which works fine on http:// a
 9. Layer slider with layers styles. Made with FREE version.
 
 == Changelog ==
+
+= 3.5.1.2 - 18. November 2021 =
+* Feature: The old background animations are allowed again when the fill mode is not fill, but anything else. 
+* Feature: You can now customize the Loading animation delay time. 
+* Fix: Image layer box shadow now shows up in the Slide Editor. 
+* Fix: We fixed an error that happened because Elementor has deprecated the _content_template method we used to create our Elementor Widget. 
+* Fix: Compatibility fixes with Perfmatters. 
+* Fix: The old Smart Slider WordPress widget can be moved back to Elementor using the SMART_SLIDER_ELEMENTOR_WIDGET_ALLOWED constant. As a result the sliders won't be missing after the 3.4.1.7 update. 
+* Fix: The slider resize didn't always get triggered on mobile when the device was rotated. 
+* Fix: The When ended → Go to next slide option will no longer trigger the Scroll to slider behavior at the video layers. 
+* Other: Dutch translation added. Thanks, Frank! 
+* Other: Spanish translation updated. Thanks, Rodrigo! 
+
 
 = 3.5.1.1 - 20. October 2021 =
 * Feature: Background blur option for the Blur fit fill mode. 

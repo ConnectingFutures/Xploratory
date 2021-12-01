@@ -1,7 +1,7 @@
 <?php
 $terms = get_terms(array(
         'hide_empty' => true,
-        'taxonomy' => 'category',
+        'taxonomy' => 'site_begin_category',
     )
 );
 
